@@ -83,7 +83,8 @@ my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 
 #New Section to display fruityvice api response (nested if else)
 streamlit.header('Fruityvice Fruit Advice!')
-fruit_choice = streamlit.text_input('What fruit would you like information about?')
+try:
+   fruit_choice = streamlit.text_input('What fruit would you like information about?')
 if not fruit_choice:
    streamlit.error('Please select a fruit to get information.')
 else:
